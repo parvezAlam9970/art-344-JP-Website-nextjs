@@ -60,7 +60,7 @@ const categoriesTabs = [
             profileImg:"",
             desc:"",
             title:"",
-          }
+          },
             {
             profileImg:"",
             desc:"",
@@ -118,11 +118,11 @@ const categoriesTabs = [
                 }`}
                 role="tabpanel"
               >
-                <div className="">
+                {/* <div className="">
                   {category?.courseDetail.map((course) => (
                     
                   ))}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

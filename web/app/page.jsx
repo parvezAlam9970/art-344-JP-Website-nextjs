@@ -12,6 +12,7 @@ import Heading from "@/components/reusable/heading"
 import PerformanceTracker from "@/components/home/mp-performance-tracker"
 import SocialFeed from "@/components/home/social-feed"
 import Gallery from "@/components/home/gallery"
+import MediaTabs from "@/components/home/social-media-tabs"
 
 
 export default function HomePage() {
@@ -28,6 +29,7 @@ export default function HomePage() {
       <PerformanceTracker/>
       <SocialFeed/>
       <Gallery/>
+      {/* <MediaTabs/> */}
       
       </Container>
       {/* <Hero />

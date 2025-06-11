@@ -55,7 +55,7 @@ export function Header() {
         </Container>
       </div>
       <div
-        className={`fixed top-0 w-full z-40 transition-all duration-300 flex justify-center  ${showNavbarTop ? "mt-10 md:mt-3.5rem" :""}`}
+        className={`fixed top-0 w-full z-40 transition-all duration-300 flex justify-center  ${showNavbarTop ? "mt-10 md:mt-[3.5rem]" :""}`}
         // style={{
         //   marginTop: showNavbarTop ? "3.5rem" : "0px", // 56px = h-14
         // }}

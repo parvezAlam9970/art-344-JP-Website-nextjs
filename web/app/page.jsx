@@ -18,7 +18,6 @@ export default function HomePage() {
   return (
     <div className="">
       
-      <Header />
       
       <Hero/>
       <Container>

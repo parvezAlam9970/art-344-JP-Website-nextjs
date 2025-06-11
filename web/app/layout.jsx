@@ -1,5 +1,6 @@
+import { Header } from '@/components/layout/header'
 import './globals.css'
-import { Playfair_Display, Newsreader, Poppins } from 'next/font/google'
+import { Playfair_Display, Newsreader, Poppins,PT_Serif ,Inter  } from 'next/font/google'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -10,6 +11,19 @@ const newsreader = Newsreader({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-newsreader',
+  display: 'swap',
+})
+
+const ptSerif = PT_Serif({
+  subsets: ['latin'],
+  weight: [ '400', '700'], 
+  variable: '--font-pt-serif',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -28,8 +42,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${newsreader.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${playfair.variable} ${newsreader.variable} ${poppins.variable} ${ptSerif.variable} ${inter.variable}`}>
+      <body>
+      <Header />
+
+      {children}
+      </body>
     </html>
   )
 }

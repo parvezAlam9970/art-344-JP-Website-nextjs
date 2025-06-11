@@ -1,5 +1,9 @@
 import { Header } from '@/components/layout/header'
 import './globals.css'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { Playfair_Display, Newsreader, Poppins,PT_Serif ,Inter  } from 'next/font/google'
 
 const playfair = Playfair_Display({

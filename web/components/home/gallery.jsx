@@ -6,10 +6,7 @@ import Line from "../reusable/horizontal-line";
 import Description from "../reusable/description";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 import Image from "next/image";
 const galleryImages = [
   "/gallery/gallery-3.jpg",
@@ -46,7 +43,7 @@ const Gallery = () => {
       </div>
       <div className="flex justify-end gap-2 mt-4 relative">
         <button
-          className="custom-swiper-prev absolute top-32 -left-8 z-50 bg-white bg-opacity-70 text-white w-16 h-16 rounded-full flex justify-center items-center"
+          className="custom-swiper-prev absolute top-32 -left-8 z-10 bg-white bg-opacity-70 text-white w-16 h-16 rounded-full flex justify-center items-center"
           aria-label="Previous Slide"
         >
           <img src="/arrow-left.svg" alt="" />
@@ -83,7 +80,7 @@ const Gallery = () => {
           ))}
         </Swiper>
         <button
-          className="custom-swiper-next absolute top-28 -right-8 z-50 bg-white bg-opacity-60 text-white w-16 h-16 rounded-full flex justify-center items-center"
+          className="custom-swiper-next absolute top-28 -right-8 z-10 bg-white bg-opacity-60 text-white w-16 h-16 rounded-full flex justify-center items-center"
           aria-label="Next Slide"
         >
           <img src="/arrow-right.svg" alt="" />

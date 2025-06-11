@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 :root {
   --font-roboto: 'Roboto', sans-serif;
   --font-playfair: 'Playfair Display', serif;

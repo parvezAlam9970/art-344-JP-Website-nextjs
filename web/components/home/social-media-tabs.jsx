@@ -60,7 +60,7 @@ const categoriesTabs = [
             profileImg:"",
             desc:"",
             title:"",
-          }
+          },
             {
             profileImg:"",
             desc:"",
@@ -120,7 +120,7 @@ const categoriesTabs = [
               >
                 <div className="">
                   {category?.courseDetail.map((course) => (
-                    
+                    course
                   ))}
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Heading = ({ heading, className, orangeWords = 0 }) => {
   const orangeWordsArr = words.slice(words.length - n)
 
   return (
-    <h6 className={cn('font-normal text-base text-wrap md:text-nowrap md:text-2xl lg:text-2xl xl:text-4xl font-newsreader text-center uppercase', className)}>
+    <h2 className={cn('font-normal  text-wrap md:text-nowrap text-2xl lg:text-2xl xl:text-4xl font-newsreader text-center uppercase', className)}>
       {normalWords}
       {n > 0 && (
         <>
@@ -19,7 +19,7 @@ const Heading = ({ heading, className, orangeWords = 0 }) => {
           </span>
         </>
       )}
-    </h6>
+    </h2>
   )
 }
 

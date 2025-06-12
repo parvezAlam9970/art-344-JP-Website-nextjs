@@ -7,13 +7,14 @@ const UpdateDetails = ({
   description,
   highlightCount = 2,
   images = [],
+  reverse=false
 }) => {
   const singleImage = images.length === 1;
 
   return (
     <section className="my-5 md:my-10 lg:my-16">
-      <div className="grid gap-5  lg:grid-cols-2 items-center">
-        <div className={""}>
+      <div className="grid gap-5  lg:gap-10 lg:grid-cols-2 items-center">
+        <div className={`${reverse ? " order-1 lg:order-2" : ""}`}>
           <Heading
             heading={title}
             orangeWords={highlightCount}
@@ -26,7 +27,7 @@ const UpdateDetails = ({
         </div>
 
         {images.length > 0 && (
-          <div className={""}>
+          <div className={`${reverse ? " order-2 lg:order-1" : ""}`}>
             {singleImage ? (
               <div className=" w-full h-full  rounded-xl overflow-hidden">
                 <Image

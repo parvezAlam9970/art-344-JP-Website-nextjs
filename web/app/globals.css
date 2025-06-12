@@ -49,3 +49,16 @@ body {
 }
 
 
+.card_effect .swiper-slide {
+  transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out, filter 0.4s ease-in-out;
+  opacity: 0.5;
+  transform: scale(0.85);
+  filter: blur(1px); /* Add blur to inactive cards */
+}
+
+.card_effect .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  filter: none; /* Remove blur for active card */
+}
+

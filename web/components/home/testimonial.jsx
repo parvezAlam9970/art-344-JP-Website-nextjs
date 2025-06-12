@@ -2,91 +2,87 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import "swiper/css/effect-coverflow";
 import TestimonialCard from "@/components/reusable/testimonial-card";
-// Dummy data for testimonials
+import SubHeading from "../reusable/sub-heading";
+import Heading from "../reusable/heading";
+import Line from "../reusable/horizontal-line";
+import Description from "../reusable/description";
+
 const testimonials = [
   {
-    name: "Manish Sharma",
-    image: "/assets/manish.svg",
+    name: "Unknown",
+    image: "/testimonial.png",
+    text: "Lorem Ipsum has been the scrambled it to make a type specimen book.Lorem Ipsum has been the scrambled it to",
+  },
+  {
+    name: "Unknown",
+    image: "/testimonial.png",
+    text: "Lorem Ipsum has been the book.Lorem Ipsum has been the scrambled it to",
+  },
+  {
+    name: "Unknown",
+    image: "/testimonial.png",
     text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since the 1500s.",
   },
   {
-    name: "Manish Sharma",
-    image: "/assets/manish.svg",
-    text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since.",
-  },
-  {
-    name: "Prateek Mishra",
-    image: "/assets/manish.svg",
+    name: "Unknown",
+    image: "/testimonial.png",
     text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since the 1500s.",
   },
   {
-    name: "Himanshu Maurya",
-    image: "/assets/manish.svg",
+    name: "Unknown",
+    image: "/testimonial.png",
     text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since the 1500s.",
   },
   {
-    name: "Asad Khan",
-    image: "/assets/manish.svg",
-    text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since the 1500s.",
-  },
-  {
-    name: "Parvez Alam",
-    image: "/assets/manish.svg",
-    text: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever since the 1500s.",
+    name: "Unknown",
+    image: "/testimonial.png",
+    text: "Lorem Ipsum has been the book.Lorem Ipsum has been the scrambled it to",
   },
 ];
+
 const TestimonialSlider = () => {
   return (
-    <div className="pt-10">
-
-     <Swiper
-  modules={[Autoplay]}
-  autoplay={{ delay: 300000000 }}
-  loop={true}
-  centeredSlides={true}
-  spaceBetween={10}
-  breakpoints={{
-    640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  }}
-  onSlideChange={(swiper) => {
-    const isMobile = window.innerWidth < 768;
-    swiper.slides.forEach((slide, index) => {
-      if (isMobile) {
-        slide.style.transform = "scale(1)";
-      } else {
-        slide.style.transform = index === swiper.activeIndex ? "scale(1.3)" : "scale(1)";
-      }
-    });
-  }}
->
-  {testimonials.map((testimonial, idx, swiper) => (
-    <SwiperSlide
-      key={idx}
-      className="transition-transform duration-300 md:py-20"
-      style={{
-    zIndex:
-      idx === swiper?.activeIndex
-        ? 30
-        : idx === swiper?.activeIndex - 1 || idx === swiper?.activeIndex + 1
-        ? 20
-        : 10,
-  }}
-    >
-      <TestimonialCard {...testimonial} />
-    </SwiperSlide>
-  ))}
-</Swiper>
+    <div className="mt-16">
+      <div className='flex flex-col items-center gap-4 mt-16'>
+        <SubHeading subHeading="TESTIMONIALS" className="text-center" />
+      <Heading
+        heading="Hear It from Those Who Know Us Best"
+        orangeWords={3}
+        className=""
+      />
+      <Line className="w-[65%]"/>
+      <Description
+        className="text-center font-inter"
+        descriptionOne="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, it to make a type specimen book."
+      />
+        </div>
+        <div className="mt-14">
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 1000 }}
+        loop={true}
+        centeredSlides={true}
+        spaceBetween={2}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {testimonials.map((testimonial, idx) => (
+          <SwiperSlide key={idx} className="">
+            {({ isActive }) => (
+              <TestimonialCard {...testimonial} isActive={isActive} />
+            )}
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      </div>
     </div>
   );
 };
+
 export default TestimonialSlider;
-
-
-
-
-
-

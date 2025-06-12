@@ -52,7 +52,7 @@ const Gallery = () => {
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={4}
           navigation={{
             prevEl: ".custom-swiper-prev",
             nextEl: ".custom-swiper-next",

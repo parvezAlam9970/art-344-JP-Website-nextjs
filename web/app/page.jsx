@@ -26,9 +26,10 @@ export default function HomePage() {
       <Gallery/>
       <MediaFeed/>
       {/* <MediaTabs/> */}
-      <Testimonial/>
+      
       
       </Container>
+      <Testimonial/>
       {/* <Hero />
       <AboutSection />
       <PolicyHighlights />

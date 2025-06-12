@@ -9,6 +9,7 @@ import SubHeading from "../reusable/sub-heading";
 import Heading from "../reusable/heading";
 import Line from "../reusable/horizontal-line";
 import Description from "../reusable/description";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -45,7 +46,13 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   return (
-    <div className="mt-16">
+    <div className="mt-16 relative">
+              <Image
+              src="/testimonial-bg.png"
+              alt="Background"
+              fill
+              className="object-cover object-center"
+            />
       <div className='flex flex-col items-center gap-4 mt-16'>
         <SubHeading subHeading="TESTIMONIALS" className="text-center" />
       <Heading

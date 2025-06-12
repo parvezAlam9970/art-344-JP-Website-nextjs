@@ -12,7 +12,7 @@ const TestimonialCard = ({ text, name, image, isActive }) => {
   style={{ borderRadius: "20px" }}
 >
       {/* Quote top left */}
-      <div className={`text-[48px] font-bold absolute left-6 top-6 text-white ${isActive ? "text-[#1B1F3B]" : "text-white"}`}>“</div>
+      <div className={`text-[48px] font-bold absolute left-6 top-6 ${isActive ? "text-[#1B1F3B]" : "text-white"}`}>“</div>
 
       {/* Main Text */}
       <p className="max-w-xl mx-auto text-base font-normal z-10 relative font-poppins">

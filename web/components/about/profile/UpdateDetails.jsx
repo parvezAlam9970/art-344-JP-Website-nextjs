@@ -39,7 +39,7 @@ const UpdateDetails = ({
                 />
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-2 gap-3 md:gap-5">
                 {images.map((img, i) => (
                   <div key={i} className=" w-full h-full lg:h-[275px] rounded-xl overflow-hidden">
                     <Image

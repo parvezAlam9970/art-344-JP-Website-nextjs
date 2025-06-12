@@ -7,6 +7,7 @@ const BreadCrumb = ({
   title = "Profile",
   subTitle = "About",
   desc = "",
+  pageTitle="",
   imageUrl = "/about/breadcrumb.png",
 }) => {
   return (
@@ -35,7 +36,7 @@ const BreadCrumb = ({
           <p className="font-inter flex justify-center items-center">
             <MdKeyboardArrowRight className="text-[25px]" />
           </p>
-          <p>{title}</p>
+          <p>{ pageTitle || title}</p>
         </div>
       </Container>
     </div>

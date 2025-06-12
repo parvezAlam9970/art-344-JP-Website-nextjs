@@ -5,7 +5,7 @@ const Description = ({descriptionOne, descriptionTwo, className}) => {
   return (
     <>
     <p className={cn('text-sm md:text-base font-normal text-[#4A4B57] font-poppins max-w-[900px]', className)}>{descriptionOne}</p>
-    <p className={cn('text-sm md:text-base font-normal text-[#4A4B57] font-poppins', className)}>{descriptionTwo}</p>
+    <p className={cn('text-sm md:text-base font-normal text-[#4A4B57] font-poppins max-w-[900px]', className)}>{descriptionTwo}</p>
     </>
   )
 }

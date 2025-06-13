@@ -13,6 +13,7 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showNavbarTop, setShowNavbarTop] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  
   const handleToggle = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
@@ -174,7 +175,7 @@ const MobileMenuItem = ({ link ,setIsMenuOpen,isMenuOpen}) => {
         </Link>
         {link.children && (
           <button
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen(!open)}  
             className="text-white focus:outline-none"
           >
             <ChevronDown

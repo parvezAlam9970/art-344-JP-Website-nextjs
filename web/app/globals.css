@@ -62,6 +62,7 @@ body {
   filter: none; /* Remove blur for active card */
 }
 
+
 .swiper-pagination-bullet {
   background-color: #f47316 !important;
   opacity: 0.7;
@@ -78,11 +79,23 @@ body {
   height: 5px !important;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   bottom: 0 !important;
 }
+
 @media (min-width: 768px) {
   .swiper-pagination {
     display: none !important;
   }
 }
+
+.testimonial_slider .swiper-slide-active{
+  z-index: 20 !important;
+}
+.testimonial_slider .swiper-slide-next{
+  padding-top: 15px !important;
+}
+.testimonial_slider .swiper-slide-prev{
+  padding-top: 15px !important;
+}
+

@@ -17,6 +17,7 @@ const page = () => {
             <div className=" grid grid-cols-2 gap-3  ">
               <div className=" h-auto md:h-[260px]">
                 <Image
+                  alt="bjp"
                   src="/about/Frame 877.png"
                   width={1000}
                   height={1000}
@@ -25,6 +26,7 @@ const page = () => {
               </div>
               <div className=" h-auto md:h-[260px]">
                 <Image
+                alt="bjp"
                   src="/about/Frame 878.png"
                   width={1000}
                   height={1000}
@@ -33,6 +35,7 @@ const page = () => {
               </div>
               <div className=" h-auto md:h-[260px]">
                 <Image
+                alt="bjp"
                   src="/about/Frame 879.png"
                   width={1000}
                   height={1000}
@@ -41,6 +44,7 @@ const page = () => {
               </div>
               <div className=" h-auto md:h-[260px]">
                 <Image
+                alt="bjp"
                   src="/about/Frame 881.png"
                   width={1000}
                   height={1000}

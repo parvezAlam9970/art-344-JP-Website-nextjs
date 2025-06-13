@@ -18,6 +18,7 @@ const IncomeTaxGrid = () => {
           <div className=" grid grid-cols-2 gap-3  ">
             <div className=" h-auto md:h-[260px]">
               <Image
+              alt="bjp"
                 src="/about/Frame 788.png"
                 width={1000}
                 height={1000}
@@ -26,6 +27,7 @@ const IncomeTaxGrid = () => {
             </div>
             <div className=" h-auto md:h-[260px]">
               <Image
+              alt="bjp"
                 src="/about/Frame 802.png"
                 width={1000}
                 height={1000}
@@ -35,6 +37,7 @@ const IncomeTaxGrid = () => {
           </div>
           <div className=" w-full h-auto md:h-[260px]">
             <Image
+            alt="bjp"
               src="/about/Frame 801.png"
               width={1000}
               height={1000}

@@ -6,7 +6,7 @@ import Description from '../reusable/description'
 import GalleryOne from '@/components/reusable/gallery-one'
 
 const youtubeLinks = [
-  'https://www.youtube.com/watch?v=7bhp2t5fAzw',
+  'https://youtu.be/rnyrDk4G68g?si=xllTcxpB_T6tct4p',
   'https://www.youtube.com/watch?v=dHfw-_2GF8Q',
   'https://www.youtube.com/watch?v=ckMmJslK12A',
   'https://www.youtube.com/watch?v=AyosOIMk7oc',

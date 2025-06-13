@@ -21,7 +21,7 @@ const items = [
 const HomeCard = () => {
   return (
     <>
-    <section className='flex  justify-center mt-24 h-96'>
+    <section className='flex  justify-center mt-24 '>
     <div className='flex flex-wrap justify-center gap-8'>
     {items.map((item,index) => <CardOne key={index} item={item} index={index}/>)}
     </div>

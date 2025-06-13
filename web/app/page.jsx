@@ -20,7 +20,7 @@ export default function HomePage() {
       <Container>
       <About/>
       <HomeCard/>
-      {/* <YourMLASection/> */}
+      <YourMLASection/>
       <PerformanceTracker/>
       <SocialFeed/>
       <Gallery/>

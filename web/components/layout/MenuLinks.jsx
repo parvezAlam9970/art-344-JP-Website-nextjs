@@ -1,13 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { linksData } from "@/constants/Links";
+import FormModal from "@/components/modal/FormModal"
 
 const MenuLinks = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
+    <>
     <nav className="hidden text-sm lg:flex items-center lg:gap-4 xl:gap-8 xl:text-lg">
       {linksData.map((item, idx) => (
         <div key={idx} className="relative group">
@@ -24,7 +27,6 @@ const MenuLinks = () => {
               {item.label}
             </Link>
           )}
-
 
           {/* Dropdown */}
           {item.children && (
@@ -47,10 +49,20 @@ const MenuLinks = () => {
       ))}
 
       <Search className="w-5 h-5 cursor-pointer text-white" />
-      <Button className="hidden md:block bg-white text-[#F47317] text-sm xl:text-[1rem] hover:bg-orange-600 hover:text-white rounded-[6.25rem]">
+      <Button
+        onClick={() => setIsOpen(true)}
+        className="hidden md:block bg-white text-[#F47317] text-sm xl:text-[1rem] hover:bg-orange-600 hover:text-white rounded-[6.25rem]"
+      >
         Work With Me
       </Button>
+
+     
     </nav>
+
+ {isOpen && (
+        <FormModal {...{setIsOpen,isOpen}} />
+      )}
+    </>
   );
 };
 

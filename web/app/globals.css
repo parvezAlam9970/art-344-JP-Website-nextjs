@@ -62,3 +62,13 @@ body {
   filter: none; /* Remove blur for active card */
 }
 
+.testimonial_slider .swiper-slide-active{
+  z-index: 20 !important;
+}
+.testimonial_slider .swiper-slide-next{
+  padding-top: 15px !important;
+}
+.testimonial_slider .swiper-slide-prev{
+  padding-top: 15px !important;
+}
+

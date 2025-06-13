@@ -62,3 +62,27 @@ body {
   filter: none; /* Remove blur for active card */
 }
 
+.swiper-pagination-bullet {
+  background-color: #f47316 !important;
+  opacity: 0.7;
+  width: 20px !important;
+  border-radius: 4px !important;
+  height: 5px !important;
+  transition: opacity 0.5s ease, width 0.5s ease;
+}
+.swiper-pagination-bullet-active {
+  background-color: #f47316 !important;
+  opacity: 1;
+  width: 42px !important;
+  border-radius: 4px !important;
+  height: 5px !important;
+}
+
+.swiper-pagination{
+  bottom: 0 !important;
+}
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}

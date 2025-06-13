@@ -4,13 +4,38 @@ import React, { useState } from 'react'
 
 
 function getVideoId(url) {
-  return new URL(url).searchParams.get('v');
+  try {
+    const parsedUrl = new URL(url);
+    const hostname = parsedUrl.hostname;
+
+    // Standard YouTube URL with search param
+    if (parsedUrl.searchParams.has('v')) {
+      return parsedUrl.searchParams.get('v');
+    }
+
+    // Shortened share URL (youtu.be)
+    if (hostname === 'youtu.be') {
+      return parsedUrl.pathname.split('/')[1];
+    }
+
+    // Shorts URL
+    if (parsedUrl.pathname.startsWith('/shorts/')) {
+      return parsedUrl.pathname.split('/')[2] || parsedUrl.pathname.split('/')[1];
+    }
+
+    return null;
+  } catch (error) {
+    console.error('Invalid YouTube URL', error);
+    return null;
+  }
 }
+
 
 function getThumbnail(url) {
   const id = getVideoId(url);
-  return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+  return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : null;
 }
+
 
 const GalleryOne = ({youtubeLinks}) => {
     const [activeVideo, setActiveVideo] = useState(null);

@@ -2,6 +2,7 @@ import React from 'react'
 import GalleryOne from "../reusable/gallery-one";
 import Heading from '../reusable/heading';
 import Description from '../reusable/description';
+import Container from '../ui/container';
 const youtubeLinks = [
   "https://www.youtube.com/watch?v=7bhp2t5fAzw",
   "https://www.youtube.com/watch?v=dHfw-_2GF8Q",
@@ -13,6 +14,7 @@ const Speeches = () => {
   return (
     
         <section className="mt-16">
+          <Container>
       <div className="flex flex-col items-center gap-4">
         <Heading
           heading="Updated speeches"
@@ -25,6 +27,7 @@ const Speeches = () => {
         />
       </div>
       <GalleryOne youtubeLinks={youtubeLinks} />
+      </Container>
       </section>
   )
 }

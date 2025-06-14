@@ -14,8 +14,6 @@ import Testimonial from "@/components/home/testimonial"
 export default function HomePage() {
   return (
     <div className="">
-      
-      
       <Hero/>
       <Container>
       <About/>
@@ -26,8 +24,7 @@ export default function HomePage() {
       <Gallery/>
       <MediaFeed/>
       {/* <MediaTabs/> */}
-      
-      
+
       </Container>
       
       <Testimonial/>
